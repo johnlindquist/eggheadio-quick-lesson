@@ -1,0 +1,50 @@
+{
+	"name": "eggheadio-quick-lesson",
+	"displayName": "egghead.io quick lesson",
+	"description": "A quick input to name a lesson and run it against +lesson in the terminal",
+	"version": "1.0.0",
+	"publisher": "johnlindquist",
+	"repository": {
+		"url": "https://github.com/johnlindquist/eggheadio-quick-lesson"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:eggheadio.lesson"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "eggheadio.lesson",
+				"title": "egghead.io quick lesson"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "eggheadio.lesson",
+				"key": "shift+alt+cmd+l",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^13.9.5",
+		"@types/vscode": "^1.32.0",
+		"tslint": "^5.16.0",
+		"typescript": "^3.8.3"
+	},
+	"dependencies": {
+		"param-case": "^3.0.3"
+	}
+}
