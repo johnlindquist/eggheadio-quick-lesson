@@ -2,7 +2,7 @@
 	"name": "eggheadio-quick-lesson",
 	"displayName": "egghead.io quick lesson",
 	"description": "A quick input to name a lesson and run it against +lesson in the terminal",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "johnlindquist",
 	"repository": {
 		"url": "https://github.com/johnlindquist/eggheadio-quick-lesson"
@@ -33,6 +33,7 @@
 		]
 	},
 	"scripts": {
+		"build": "vsce package",
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"lint": "tslint -p ./",

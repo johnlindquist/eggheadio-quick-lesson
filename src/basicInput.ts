@@ -1,5 +1,4 @@
 import { window, } from 'vscode';
-import { paramCase } from "param-case";
 
 
 export async function showInputBox() {
@@ -10,10 +9,8 @@ export async function showInputBox() {
 
 	if (!lessonName) return
 
-	let dashedLessonName = `${paramCase(lessonName)}`
 
-
-	window.showInformationMessage(`Creating: ${dashedLessonName}`);
+	window.showInformationMessage(`Creating: ${lessonName}`);
 
 	let termName = "egghead.io quick lesson"
 	let term = window.createTerminal(termName)
@@ -25,7 +22,7 @@ export async function showInputBox() {
 		}
 	})
 
-	let command = `+lesson ${dashedLessonName}`
+	let command = `+lesson ${lessonName}`
 	term.sendText(command)
 }
 
