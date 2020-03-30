@@ -22,7 +22,7 @@ export async function showInputBox() {
 		}
 	})
 
-	let command = `+lesson ${lessonName}`
+	let command = `+lesson "${lessonName}"`
 	term.sendText(command)
 }
 
