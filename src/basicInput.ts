@@ -9,9 +9,6 @@ export async function showInputBox() {
 
 	if (!lessonName) return
 
-
-	window.showInformationMessage(`Creating: ${lessonName}`);
-
 	let termName = "egghead.io quick lesson"
 	let term = window.createTerminal(termName)
 	term.show(true)
@@ -22,7 +19,8 @@ export async function showInputBox() {
 		}
 	})
 
-	let command = `+lesson "${lessonName}"`
+	let message = `Creating: ${lessonName}`
+	let command = `echo "${message}" && +lesson "${lessonName}"`
 	term.sendText(command)
 }
 
